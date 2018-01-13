@@ -36,12 +36,12 @@ public class Main extends Application {
     public void init() throws Exception {
 
         // get requirements
-        String javaVersionStr = System.getProperty("java.specification.version","UNKNOWN");
+        String javaVersionStr = System.getProperty("java.specification.version", "UNKNOWN");
         // if you need to enforce specfic 1.8 build like 4 or 6 use java.version
         //System.getProperties().list(System.out);
 
         Double javaVersionNum = Double.parseDouble(javaVersionStr);
-        if( javaVersionNum < 1.8 ) {
+        if (javaVersionNum < 1.8) {
             System.out.println("Java Version Error: " + javaVersionStr);
             System.exit(1);
         }
@@ -52,7 +52,7 @@ public class Main extends Application {
 
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
 
         // store reference
         mainStage = primaryStage;
@@ -78,23 +78,22 @@ public class Main extends Application {
         mainStage.setTitle(resourceStrings.getString("wind.title.main"));
 
         // application window icon is set
-        mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("/media/windows.iconset/icon_16x16.png")));
-        mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("/media/windows.iconset/icon_24x24.png")));
-        mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("/media/windows.iconset/icon_32x32.png")));
-        mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("/media/windows.iconset/icon_48x48.png")));
-        mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("/media/windows.iconset/icon_64x64.png")));
-        mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("/media/windows.iconset/icon_96x96.png")));
-        mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("/media/windows.iconset/icon_128x128.png")));
-        mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("/media/windows.iconset/icon_256x256.png")));
-        mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("/media/windows.iconset/icon_512x512.png")));
-
+        mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("/windows.iconset/icon_16x16.png")));
+        mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("/windows.iconset/icon_24x24.png")));
+        mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("/windows.iconset/icon_32x32.png")));
+        mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("/windows.iconset/icon_48x48.png")));
+        mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("/windows.iconset/icon_64x64.png")));
+        mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("/windows.iconset/icon_96x96.png")));
+        mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("/windows.iconset/icon_128x128.png")));
+        mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("/windows.iconset/icon_256x256.png")));
+        mainStage.getIcons().add(new Image(Main.class.getResourceAsStream("/windows.iconset/icon_512x512.png")));
 
 
         Scene mainScene = new Scene(root);
         mainStage.setScene(mainScene);
 
         // set volume to user prefs id
-        mainController.sldVolume.adjustValue(appPrefs.getDouble("player.volume",0.5));
+        mainController.sldVolume.adjustValue(appPrefs.getDouble("player.volume", 0.5));
         mainStage.show();
 
         /**
@@ -110,16 +109,18 @@ public class Main extends Application {
     public void stop() throws Exception {
 
         // save user appPrefs for position and size of main window
-        appPrefs.putDouble("main.wind.x",mainStage.getX());
-        appPrefs.putDouble("main.wind.y",mainStage.getY());
-        appPrefs.putDouble("main.wind.h",mainStage.getHeight());
-        appPrefs.putDouble("main.wind.w",mainStage.getWidth());
+        appPrefs.putDouble("main.wind.x", mainStage.getX());
+        appPrefs.putDouble("main.wind.y", mainStage.getY());
+        appPrefs.putDouble("main.wind.h", mainStage.getHeight());
+        appPrefs.putDouble("main.wind.w", mainStage.getWidth());
 
         // save current volume preference
-        appPrefs.putDouble("player.volume",mainController.sldVolume.getValue());
+        appPrefs.putDouble("player.volume", mainController.sldVolume.getValue());
 
     }
 
-    public static void main(String[] args) { launch(args); }
+    public static void main(String[] args) {
+        launch(args);
+    }
 
 }

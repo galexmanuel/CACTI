@@ -1,0 +1,13 @@
+<userConfiguration>
+<codes><!-- Therapist codes --><code name="CQ0" value="11"/><code name="OQ0" value="14"/></codes>
+<codeControls panel="left" label="Therapist">
+<row><button code="CQ0"/><button code="OQ0"/></row>
+</codeControls>
+<codeControls panel="right" label="Client">
+<row><button code="D+"/><button code="D-"/></row>
+</codeControls>
+<codes>!-- Client codes --><code name="D+" value="34"/><code name="D-" value="35"/></codes>
+<globals><global name="ACCEPTANCE" label="Acceptance" value="0"/></globals>
+<globalControls panel="left"><slider global="ACCEPTANCE"/></globalControls>
+<globalControls panel="right"><slider global="COLLABORATION"/></globalControls>
+</userConfiguration>

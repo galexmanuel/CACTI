@@ -1,0 +1,62 @@
+<userConfiguration>
+    <codes>
+        <!-- Therapist codes from MITI 4.2 -->
+        <code value="11" name="GI"/>
+        <code value="14" name="P"/>
+        <code value="18" name="PWP"/>
+        <code value="20" name="Q"/>
+        <code value="51" name="SR"/>
+        <code value="21" name="CR"/>
+        <code value="22" name="AF"/>
+        <code value="23" name="SEEK"/>
+        <code value="52" name="EA"/>
+        <code value="1" name="CO"/>
+        <!-- Client codes -->
+        <code value="34" name="CT"/>
+        <code value="35" name="ST"/>
+        <code value="36" name="FN"/>
+        <code value="50" name="NC"/>
+    </codes>
+    <codeControls label="Therapist" panel="left">
+        <row>
+            <button code="GI"/>
+            <button code="P"/>
+            <button code="PWP"/>
+        </row>
+        <row>
+            <button code="Q"/>
+            <button code="SR"/>
+            <button code="CR"/>
+            <button code="AF"/>
+        </row>
+        <row>
+            <button code="SEEK"/>
+            <button code="EA"/>
+            <button code="CO"/>
+        </row>
+    </codeControls>
+    <codeControls label="Client" panel="right">
+        <row>
+            <button code="CT"/>
+            <button code="ST"/>
+        </row>
+        <row>
+            <button code="FN"/>
+            <button code="NC"/>
+        </row>
+    </codeControls>
+    <globals>
+        <global value="0" name="CULTIVATING CT" label="Cultivating CT" defaultRating="3"/>
+        <global value="1" name="SOFTENING ST" label="Softening ST" defaultRating="3"/>
+        <global value="2" name="PARTNERSHIP" label="Partnership" defaultRating="3"/>
+        <global value="3" name="EMPATHY" label="Empathy" defaultRating="3"/>
+    </globals>
+    <globalControls panel="left">
+        <slider global="CULTIVATING CT"/>
+        <slider global="SOFTENING ST"/>
+        <slider global="PARTNERSHIP"/>
+        <slider global="EMPATHY"/>
+    </globalControls>
+    <globalsBorder label="Global Ratings"/>
+</userConfiguration>
+

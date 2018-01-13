@@ -343,7 +343,7 @@ public class MainController {
         }
         about.setScene(new Scene(root));
         about.setTitle(resourceStrings.getString("txt.about.title"));
-        about.getIcons().add(new Image(Main.class.getResourceAsStream("/media/windows.iconset/icon_16x16.png")));
+        about.getIcons().add(new Image(Main.class.getResourceAsStream("/windows.iconset/icon_16x16.png")));
         about.initModality(Modality.APPLICATION_MODAL);
         about.initStyle(StageStyle.UTILITY);
         about.showAndWait();
@@ -394,7 +394,7 @@ public class MainController {
         lblHeaderText.setWrapText(true);
         dlgSettingsKb.getDialogPane().setHeader(lblHeaderText);
         Stage dlgStage = (Stage) dlgSettingsKb.getDialogPane().getScene().getWindow();
-        dlgStage.getIcons().add(new Image(Main.class.getResourceAsStream("/media/windows.iconset/icon_16x16.png")));
+        dlgStage.getIcons().add(new Image(Main.class.getResourceAsStream("/windows.iconset/icon_16x16.png")));
         dlgSettingsKb.getDialogPane().getButtonTypes().addAll(ButtonType.APPLY, ButtonType.CANCEL);
 
         GridPane gridKb = new GridPane();
